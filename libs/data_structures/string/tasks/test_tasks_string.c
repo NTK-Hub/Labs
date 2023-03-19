@@ -43,3 +43,52 @@ void test_removeNonLetters() {
     test_removeNonLetters1();
     test_removeNonLetters2();
 }
+void test_removeAdjacentEqualLetters1() {
+    char str[] = "hhddmmcckfl";
+
+    removeAdjacentEqualLetters(str);
+
+    char res[] = "dlnsdul";
+
+    ASSERT_STRING(res, str);
+}
+
+void test_removeAdjacentEqualLetters2() {
+    char str[] = "d5vjdl3fudv";
+
+    removeAdjacentEqualLetters(str);
+
+    char res[] = "f6hkvndc8fd";
+
+    ASSERT_STRING(res, str);
+}
+
+void test_removeAdjacentEqualLetters() {
+    test_removeAdjacentEqualLetters1();
+    test_removeAdjacentEqualLetters2();
+}
+
+void test_removeExtraSpaces1() {
+    char str[] = "dh    vb de   7 1  h";
+
+    removeExtraSpaces(str);
+
+    char res[] = "re bn cd 6 1 h";
+
+    ASSERT_STRING(res, str);
+}
+
+void test_removeExtraSpaces2() {
+    char str[] = "  def     ghrrc vf     lol";
+
+    removeExtraSpaces(str);
+
+    char res[] = " def hrrc vf lol";
+
+    ASSERT_STRING(res, str);
+}
+
+void test_removeExtraSpaces() {
+    test_removeExtraSpaces1();
+    test_removeExtraSpaces2();
+}

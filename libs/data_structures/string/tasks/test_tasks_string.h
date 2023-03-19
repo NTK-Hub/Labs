@@ -10,5 +10,7 @@
 #include "../../string/string_.h"
 
 #include "removeNonLetters.h"
+#include "removeAdjacentEqualLetters.h"
+#include "removeExtraSpaces.h"
 
 #endif //LABS_TEST_TASKS_STRING_H

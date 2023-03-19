@@ -1,0 +1,10 @@
+//
+// Created by NTK on 19.03.2023.
+//
+
+#ifndef LABS_REMOVEADJACENTEQUALLETTERS_H
+#define LABS_REMOVEADJACENTEQUALLETTERS_H
+
+void removeAdjacentEqualLetters(char *s);
+
+#endif //LABS_REMOVEADJACENTEQUALLETTERS_H
