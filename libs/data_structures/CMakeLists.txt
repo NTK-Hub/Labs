@@ -3,5 +3,7 @@ add_library(data_structures
         matrix/matrix.c
         vector/vector.c
         string/string_.c
+        string/test_string_.c
         )
+
 target_link_libraries(data_structures algorithms)

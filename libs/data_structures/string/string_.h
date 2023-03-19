@@ -7,6 +7,39 @@
 
 #include <ctype.h>
 #include <memory.h>
+#include "stdbool.h"
+
+#define MAX_STRING_SIZE 100
+#define MAX_N_WORDS_IN_STRING 100
+#define MAX_WORD_SIZE 20
+
+char _stringBuffer[MAX_STRING_SIZE + 1];
+
+typedef struct WordDescriptor {
+    char *begin; // позиция начала слова
+    char *end; // позиция первого символа, после последнего символа слова
+} WordDescriptor;
+
+typedef struct BagOfWords {
+    WordDescriptor words[MAX_N_WORDS_IN_STRING];
+    size_t size;
+} BagOfWords;
+
+BagOfWords _bag;
+BagOfWords _bag2;
+
+typedef enum WordBeforeFirstWordWithAReturnCode {
+    FIRST_WORD_WITH_A,
+    NOT_FOUND_A_WORD_WITH_A,
+    WORD_FOUND,
+    EMPTY_STRING
+} WordBeforeFirstWordWithAReturnCode;
+
+typedef enum WordPrecedingTheFirstOccurrence {
+    FIRST_WORD,
+    NOT_FOUND,
+    PREVIOUS_WORD_FOUND,
+} WordPrecedingTheFirstOccurrence;
 
 //возвращает количество символов в строке (не считая ноль-символ)
 size_t strlen_(const char *begin);
@@ -42,6 +75,8 @@ char *findSpaceReverse(char *rbegin, const char *rend);
 //равны, иначе – положительное значение
 int strcmp(const char *lhs, const char *rhs);
 
+bool cmpWord(WordDescriptor w1, WordDescriptor w2);
+
 //записывает по адресу beginDestination
 //фрагмент памяти, начиная с адреса beginSource до endSource
 //Возвращает указатель на следующий свободный фрагмент памяти в destination
@@ -59,5 +94,34 @@ char *copyIf(char *beginSource, const char *endSource,
 //beginDestination по окончанию работы функции
 char *copyIfReverse(char *rbeginSource, const char *rendSource,
                     char *beginDestination, int (*f)(int));
+
+//возвращает конец строки
+char *getEndOfString(char *str);
+
+//вернёт значение 0, если слово не было считано, в противном
+//случае будет возвращено значение 1 и в переменную word типа WordDescriptor
+//будут записаны позиции начала слова, и первого символа после конца слова
+int getWord(char *beginSearch, WordDescriptor *word);
+
+
+int getWordRevers(char *rbegin, char *rend, WordDescriptor *word);
+
+//возвращает указатель на первую запятую, расположенную на ленте
+// памяти начиная с адреса begin или на первый ноль-символ
+char *findComma(char *begin);
+
+//вернёт значение 0, если слово не было считано, в противном
+//случае будет возвращено значение 1 и в переменную word типа WordDescriptor
+//будут записаны позиции начала слова, и первого символа после конца слова
+int getWordSeparatedByComma(char *beginSearch, WordDescriptor *word);
+
+//вернёт значение 0, если слово w1 не совпадает со словом w2 иначе 1
+int areWordsEqual(WordDescriptor w1,
+                  WordDescriptor w2);
+
+//
+void getBagOfWords(BagOfWords *bag, char *s);
+
+void wordDescriptorToString(WordDescriptor word, char *destination);
 
 #endif //LABS_STRING_H
