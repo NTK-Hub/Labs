@@ -147,3 +147,28 @@ void test_digitToEndRevers() {
     test_digitToEndRevers1();
     test_digitToEndRevers2();
 }
+
+void test_replaceNumberWithSpaces1() {
+    char str[] = "8rrt";
+
+    replaceNumberWithSpaces(str);
+
+    char res[] = "  rrt";
+
+    ASSERT_STRING(res, str);
+}
+
+void test_replaceNumberWithSpaces2() {
+    char str[] = "8mfr4md 8";
+
+    replaceNumberWithSpaces(str);
+
+    char res[] = " der   bt  ";
+
+    ASSERT_STRING(res, str);
+}
+
+void test_replaceNumberWithSpaces() {
+    test_replaceNumberWithSpaces1();
+    test_replaceNumberWithSpaces2();
+}
