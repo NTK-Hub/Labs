@@ -9,4 +9,5 @@ add_library(string
         tasks/replaceNumbersWithSpaces.c
         tasks/allLettersInString.c
         tasks/replace.c
+        tasks/printWordsRevers.c
         )
