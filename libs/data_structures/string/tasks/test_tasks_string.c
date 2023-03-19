@@ -277,3 +277,24 @@ void test_wordsOrdered() {
     test_wordsOrdered1();
     test_wordsOrdered2();
 }
+
+void test_reversString1() {
+    char str[] = "colin walk home";
+    char res1[] = "home walk colin";
+    reversString(str);
+
+    ASSERT_STRING(str, res1);
+}
+
+void test_reversString2() {
+    char str[] = " cute cat";
+    char res1[] = "cat cute";
+    reversString(str);
+
+    ASSERT_STRING(str, res1);
+}
+
+void test_reversString() {
+    test_reversString1();
+    test_reversString2();
+}

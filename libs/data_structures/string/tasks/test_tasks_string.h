@@ -19,5 +19,6 @@
 #include "replace.h"
 #include "printWordsRevers.h"
 #include "wordsOrdered.h"
+#include "reversString.h"
 
 #endif //LABS_TEST_TASKS_STRING_H

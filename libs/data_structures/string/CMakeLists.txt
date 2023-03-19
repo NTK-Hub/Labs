@@ -11,4 +11,5 @@ add_library(string
         tasks/replace.c
         tasks/printWordsRevers.c
         tasks/wordsOrdered.c
+        tasks/reversString.c
         )
