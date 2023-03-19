@@ -172,3 +172,54 @@ void test_replaceNumberWithSpaces() {
     test_replaceNumberWithSpaces1();
     test_replaceNumberWithSpaces2();
 }
+
+void test_allLettersInString1() {
+    char str[] = "";
+    char word[] = "eijf";
+
+    WordDescriptor symbols;
+
+    getWord(word, &symbols);
+
+    bool res = allLettersInString(str, symbols);
+
+    assert(res == false);
+
+    printf("test_allLettersInString1 - OK\n");
+}
+
+void test_allLettersInString2() {
+    char str[] = "fkmft srtg dlmfr";
+    char word[] = "dltk";
+
+    WordDescriptor symbols;
+
+    getWord(word, &symbols);
+
+    bool res = allLettersInString(str, symbols);
+
+    assert(res == false);
+
+    printf("test_allLettersInString2 - OK\n");
+}
+
+void test_allLettersInString3() {
+    char str[] = "dlmfr dfrw lmfrkv dlemf";
+    char word[] = "flmg";
+
+    WordDescriptor symbols;
+
+    getWord(word, &symbols);
+
+    bool res = allLettersInString(str, symbols);
+
+    assert(res == true);
+
+    printf("test_allLettersInString3 - OK\n");
+}
+
+void test_allLettersInString() {
+    test_allLettersInString1();
+    test_allLettersInString2();
+    test_allLettersInString3();
+}

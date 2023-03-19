@@ -7,4 +7,5 @@ add_library(string
         tasks/digitToStart.c
         tasks/digitToEndRevers.c
         tasks/replaceNumbersWithSpaces.c
+        tasks/allLettersInString.c
         )
