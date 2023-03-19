@@ -18,5 +18,6 @@
 #include "allLettersInString.h"
 #include "replace.h"
 #include "printWordsRevers.h"
+#include "wordsOrdered.h"
 
 #endif //LABS_TEST_TASKS_STRING_H

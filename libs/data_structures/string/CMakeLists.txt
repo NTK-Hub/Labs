@@ -10,4 +10,5 @@ add_library(string
         tasks/allLettersInString.c
         tasks/replace.c
         tasks/printWordsRevers.c
+        tasks/wordsOrdered.c
         )

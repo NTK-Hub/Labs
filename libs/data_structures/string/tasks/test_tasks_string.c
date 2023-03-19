@@ -254,3 +254,26 @@ void test_replace() {
     test_replace1();
     test_replace2();
 }
+
+void test_wordsOrdered1() {
+    char str[] = "alina daddy mom";
+    bool res = true;
+
+    assert(wordOrdered(str) == res);
+
+    printf("test_wordsOrdered1 - OK\n");
+}
+
+void test_wordsOrdered2() {
+    char str[] = "life film print";
+    bool res = true;
+
+    assert(!wordOrdered(str) == res);
+
+    printf("test_wordsOrdered2 - OK\n");
+}
+
+void test_wordsOrdered() {
+    test_wordsOrdered1();
+    test_wordsOrdered2();
+}
