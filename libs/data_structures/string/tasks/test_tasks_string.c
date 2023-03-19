@@ -223,3 +223,34 @@ void test_allLettersInString() {
     test_allLettersInString2();
     test_allLettersInString3();
 }
+
+void test_replace1() {
+    char str[] = "dlmf dlm xd lmfrnt dlmc";
+
+    char word1[] = "sdsd";
+    char word2[] = "lmfrn";
+
+    replace(str, word1, word2);
+
+    char res[] = "slmf sde bg lmfurn dknf";
+
+    ASSERT_STRING(res, str);
+}
+
+void test_replace2() {
+    char str[] = "dfew lmfnr kmdnfcrt kmvrt";
+
+    char word1[] = "djnfrd";
+    char word2[] = "vkt";
+
+    replace(str, word1, word2);
+
+    char res[] = "flksmvfr dhrlmcdr gkmsq";
+
+    ASSERT_STRING(res, str);
+}
+
+void test_replace() {
+    test_replace1();
+    test_replace2();
+}

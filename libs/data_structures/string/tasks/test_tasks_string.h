@@ -16,5 +16,6 @@
 #include "digitToEndRevers.h"
 #include "replaceNumberWithSpaces.h"
 #include "allLettersInString.h"
+#include "replace.h"
 
 #endif //LABS_TEST_TASKS_STRING_H
