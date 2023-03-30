@@ -5,4 +5,8 @@
 #ifndef LABS_ALGORITHM_H
 #define LABS_ALGORITHM_H
 
+#include <stdlib.h>
+
+void universalSwap(void *a, void *b, size_t size);
+
 #endif //LABS_ALGORITHM_H
