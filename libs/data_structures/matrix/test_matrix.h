@@ -48,8 +48,11 @@ void test_transposeSquareMatrix2();
 void test_transposeSquareMatrix3();
 
 void test_transposeMatrix();
+
 void test_transposeMatrix1();
+
 void test_transposeMatrix2();
+
 void test_transposeMatrix3();
 
 void test_getMinValuePos();
